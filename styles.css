@@ -1,0 +1,64 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 40px;
+  background: #f5f5f5;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Part 1: CSS Transitions */
+#hoverBtn {
+  padding: 12px 20px;
+  background: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#hoverBtn:hover {
+  background: #0055aa;
+  transform: scale(1.1);
+}
+
+/* Info box for JS function output */
+.info-box {
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  width: 250px;
+  font-size: 16px;
+}
+
+/* Part 3: Animation box */
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: coral;
+  border-radius: 10px;
+  transition: transform 1s ease;
+}
+
+/* Animation class triggered by JS */
+.box.animate {
+  transform: rotate(360deg) scale(1.5);
+}
+
+/* Keyframes example (extra flair) */
+@keyframes pulse {
+  0% { transform: scale(1); background: coral; }
+  50% { transform: scale(1.2); background: tomato; }
+  100% { transform: scale(1); background: coral; }
+}
+
+.box.pulse {
+  animation: pulse 2s infinite;
+}
